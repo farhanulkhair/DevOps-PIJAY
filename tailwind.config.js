@@ -16,9 +16,13 @@ export default {
         sedan: ['sedan'],
       },
       colors: {
-        customBg: '#CCD0CF',
+        customBg: '#11212D',
         customNav: '#06141B',
-      }
+        customCard: '#4a5c6a',
+      },
+      boxShadow: {
+        custom: '0 0 10px 0 #9ba8ab',
+      },
     },
   },
   plugins: [],

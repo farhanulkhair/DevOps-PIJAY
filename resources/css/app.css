@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glow-border {
+    border: 2px solid transparent; /* Border transparan untuk efek glow */
+    position: relative; /* Agar pseudo-element dapat diposisikan */
+}
+
+.glow-border::before {
+    content: '';
+    position: absolute;
+    top: -4px; /* Atur sesuai kebutuhan */
+    left: -4px; /* Atur sesuai kebutuhan */
+    right: -4px; /* Atur sesuai kebutuhan */
+    bottom: -4px; /* Atur sesuai kebutuhan */
+    background-color: #9ba8ab; /* Ganti dengan warna yang diinginkan */
+    border-radius: inherit; /* Mengikuti bentuk border dari elemen induk */
+    z-index: -1; /* Menempatkan di belakang konten */
+    filter: blur(8px); /* Mengatur efek blur */
+}
