@@ -13,7 +13,11 @@ export default {
       },
       fontFamily: {
         poppin: ['Poppins', 'sans-serif'],
-        sedan: ['sedan']
+        sedan: ['sedan'],
+      },
+      colors: {
+        customBg: '#CCD0CF',
+        customNav: '#06141B',
       }
     },
   },

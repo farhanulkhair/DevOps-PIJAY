@@ -11,20 +11,28 @@
 </head>
 <body>
     <!-- Navbar -->
-    <div class="flex px-4 py-0 md:px-40 bg-orange-200 fixed top-0 left-0 w-full border border-spacing-1 justify-center">
+    <div class="flex items-center px-4 py-0 md:px-40 bg-customNav fixed top-0 left-0 w-full border border-spacing-1">
+        {{-- Logo --}}
+        <div class="flex-shrink-0 px-3 py-3">
+            <a href="javascript:scroll(1)">
+                <img src="{{ asset('images/logoHotel.jpeg') }}" alt="logo" class="w-14 h-14 rounded-full">
+            </a>    
+        </div>
+        {{-- End of logo --}}
+        
         <!-- Menu -->
-        <div >
-            <ul class="flex gap-5 font-semibold text-black text-lg" >
-                <li class="p-2 m-4 hover:bg-orange-600 duration-[0.2s] rounded-md">
+        <div class="flex-1 flex justify-end text-center">
+            <ul class="flex justify-center gap-5 font-semibold text-white text-lg">
+                <li class="p-2 m-4 hover:scale-90 duration-[0.2s] rounded-md">
                     <a href="javascript:scroll(1)">Booking</a>
                 </li>
-                <li class="p-2 m-4 hover:bg-orange-600 duration-[0.2s] rounded-md">
+                <li class="p-2 m-4 hover:scale-90 duration-[0.2s] rounded-md">
                     <a href="javascript:scroll(2)">Riwayat</a>
                 </li>
             </ul>
         </div>
         <!-- End of menu -->
-    </div>
+    </div>    
     <!-- End of navbar -->
 
     <script>

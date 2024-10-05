@@ -9,7 +9,7 @@
     </style>
     <title>Hotel Booking System</title>
 </head>
-<body>
+<body class="bg-customBg">
     @include('components.navbar')
 
     <!-- Booking -->
