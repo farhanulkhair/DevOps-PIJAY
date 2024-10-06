@@ -1,0 +1,31 @@
+name: Build and Push Laravel Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step untuk checkout kode dari repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step untuk login ke Docker Hub
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+    # Step untuk membangun Docker image
+    - name: Build Docker Image
+      run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/laravel_app:latest .
+
+    # Step untuk mendorong image ke Docker Hub
+    - name: Push Docker Image to Docker Hub
+      run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/laravel_app:latest
+
+    # (Opsional) Jalankan pengujian Laravel di dalam container Docker
+    - name: Run Laravel Tests
+      run: docker run ${{ secrets.DOCKER_HUB_USERNAME }}/laravel_app:latest php artisan test
