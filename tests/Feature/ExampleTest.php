@@ -13,7 +13,11 @@ class ExampleTest extends TestCase
     public function test_the_application_returns_a_successful_response(): void
     {
         $response = $this->get('/');
-
+    
+        // Dump konten respons untuk debugging
+        $response->dump();
+    
         $response->assertStatus(200);
     }
+
 }
