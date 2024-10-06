@@ -97,7 +97,7 @@
     <div id="3" class="p-24 pt-28 h-screen pl-72 pr-72">
         <div class="bg-customCard rounded-lg text-white p-10 glow-border">
             <h1 class="font-bold text-left text-4xl">Booking History</h1>
-            <div class="pt-5 overflow-x-auto">
+            <div class="pt-10 overflow-x-auto rounded-lg">
                 <table class="min-w-full divide-y divide-gray-600">
                     <thead>
                         <tr>
