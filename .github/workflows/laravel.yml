@@ -13,7 +13,7 @@ jobs:
 
     services:
       mysql:
-        image: mysql:8.0
+        image: mysql:8.2
         env:
           MYSQL_DATABASE: booking-hotel-system
           MYSQL_ROOT_PASSWORD: root # Atur password sesuai keinginan
@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
-        php-version: '8.0'
+        php-version: '8.2'
     - uses: actions/checkout@v4
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
@@ -51,5 +51,5 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 3306
         DB_USERNAME: root
-        DB_PASSWORD: root # Pastikan ini sesuai dengan password yang Anda atur
+        DB_PASSWORD: '' # Pastikan ini sesuai dengan password yang Anda atur
       run: php artisan test
