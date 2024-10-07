@@ -72,3 +72,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: farhanulkhair/pijay:latest
+        
