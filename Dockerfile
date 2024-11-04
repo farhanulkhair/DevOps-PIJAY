@@ -36,7 +36,7 @@ RUN npm install
 RUN npm run build
 
 # Konfigurasikan Apache untuk mengarahkan ke folder public
-RUN echo '<VirtualHost *:80>\n\
+RUN echo '<VirtualHost *:8080>\n\
     DocumentRoot /var/www/html/public\n\
     <Directory /var/www/html/public>\n\
         AllowOverride All\n\
@@ -58,6 +58,6 @@ RUN if [ -f "/var/www/html/.env.example" ]; then \
 # Generate application key
 RUN php /var/www/html/artisan key:generate
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["apache2-foreground"]
