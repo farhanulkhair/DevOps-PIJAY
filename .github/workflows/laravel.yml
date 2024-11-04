@@ -15,7 +15,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: booking-hotel-system
         ports:
-          - 3306:3306
+          - 8080:8080
         options: >-
           --health-cmd="mysqladmin ping"
           --health-interval=10s
@@ -55,7 +55,7 @@ jobs:
       env:
         DB_CONNECTION: mysql
         DB_HOST: 127.0.0.1
-        DB_PORT: 3306
+        DB_PORT: 8080
         DB_DATABASE: booking-hotel-system
         DB_USERNAME: root
         DB_PASSWORD: root
